@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<!-- CONTENTS 
+
+1. HEAD
+        a. TITLE
+2. BODY
+        a. MENU
+        b. DROPDOWN MENU
+        c. CONTAINER A
+        d. CONTAINER B
+        f. CONTAINER C
+
+-->
+ 
+<!-- ========================= HEAD ========================= -->
+<head> 
+    <title>Movies</title>
+
+    <!-- Meta tag to help with responsive design -->
+    <!-- Taken from: https://css-tricks.com/snippets/html/responsive-meta-tag/ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Insert JS file -->
+    <script src = "index.js"></script>
+    <!-- Insert dropdown menu JS file for dropdown menu function -->
+    <script src = "dropdown.js"></script>
+
+	<!-- Link to stylesheet to customise this page -->
+    <link rel="stylesheet" type="text/css" href="body.css">
+    <link rel="stylesheet" type="text/css" href="queries.css">
+
+    <!-- Custom font imported from Google Fonts to customisation -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<!-- ========================= BODY ========================= -->
+<body>
+
+    <!-- ========== MENU ========== -->
+    <nav class="menu">
+        <ul>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="criticspick.html">Critics' Pick</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== DROPDOWN ========== -->
+    <!-- Adapted from: http://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <nav class="dropdown">
+        <!-- onclick function from: http://www.w3schools.com/jsref/event_onclick.asp -->
+        <button id="ddbutton" onclick="dropdown()">MENU</button>
+        <ul id="ddcontent">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criticspick.html">Critics' Pick</a></li>
+            <li><a href="search.html">Search</a></li>
+        </ul>
+    </nav> 
+
+    <!-- ========== CONTAINER A ========== -->
+    <section class="container index a">
+        <div class="content index a1">
+            <h1>Movie Trailers</h1>
+        </div>
+    </section>
+
+    <!-- ========== CONTAINER B ========== -->
+    <section class="container index b">
+        <div class="content index b1">
+            <p>Watch movie trailers while viewing information about the movie. This website contains two pages. The Critics' Pick page allows the user to view the top 6 movie picked by NY Times critics, and subsequently view the information and a playlist of trailers associated with them. The Search page allows the user to do the same, but also input the title of the movie.</p>
+        </div>
+    </section>
+
+    <!-- ========== CONTAINER C ========== -->
+    <section class="container index c">
+        <div class="content index c">
+            <a href="criticspick.html">CRITICS' PICK</a><br/>
+            <!-- Icon design created in Adobe Illustrator -->
+            <!-- Icon based on design found at: https://www.google.co.uk/search?q=film+critic+icon&espv=2&biw=1064&bih=1060&source=lnms&tbm=isch&sa=X&ved=0ahUKEwie_MOvsqXRAhXCCMAKHR6eDHoQ_AUIBigB#imgrc=no_mcPV0dz_7tM%3A -->
+            <img src="criticicon.png" alt="Movie roll icon">
+        </div>
+        <div class="content index c">
+            <a href="search.html">SEARCH</a><br/>
+            <!-- Icon design created in Adobe Illustrator -->
+            <!-- Icon based on design found at: https://www.google.co.uk/search?q=search+icon&espv=2&biw=1064&bih=1060&source=lnms&tbm=isch&sa=X&ved=0ahUKEwirsbi2sqXRAhWFAcAKHSy3Ar0Q_AUIBigB#imgrc=IXUP_a8fsmUy8M%3A -->
+            <img src="searchicon.png" alt="Looking glass icon">
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+/*======================= MEDIA QUERIES ======================== */
+
+/* ================================ CONTENTS =================================
+
+1. MAX WIDTH 1000PX
+        a. MENU
+        b. CONTAINERS
+        c. CONTENT
+        d. SLIDEOUT
+2. MAX WIDTH 800PX
+        a. MENU
+        b. DROPDOWN
+        c. CONTAINERS
+        d. CONTENT
+3. MAX WIDTH 690PX
+4. MAX WIDTH 500PX
+5. MAX WIDTH 360PX
+
+*/
+
+
+/*============================ MAX WIDTH 1000PX ============================= */
+
+@media(max-width: 1000px) {
+
+/* ============= MENU ============= */
+
+.menu {
+    width: 96%;
+    margin-left: 2%;
+    top: 0;
+}
+
+/* ============= CONTAINERS ============= */
+.container {
+    width: 96%;
+    margin: auto;
+}
+
+/* ============= CONTENT ============= */
+
+.movie_title {
+    font-size: 1.2em;
+}
+
+/* ============= SLIDEOUT ============= */
+
+/* Adjust all players separately, as giving them all the same class
+resulted in CSS not being implemented, and the same ID cannot be given to more than
+one element */
+/* Adjust all players separately, as giving them all the same class
+resulted in CSS not being implemented, and the same ID cannot be given to more than
+one element */
+
+#slideoutA {
+    width: 96%;
+    margin: auto;
+}
+#slideoutB {
+    width: 96%;
+    margin: auto;
+}
+#slideoutC {
+    width: 96%;
+    margin: auto;
+}
+}
+
+
+/*============================ MAX WIDTH 800PX ============================= */
+
+@media(max-width: 800px) {
+
+/* ============= MENU ============= */
+
+/* Main menu not displayed as it is replaced by dropdown menu */
+.menu {
+    display: none;
+}
+
+/*========== DROPDOWN ========== */
+
+/* Rules for dropdown menu
+which replaces the main menu */
+.dropdown {
+    top: 0;
+    display: inline-block;
+    position: fixed;
+    width: 98%;
+    margin-left: 1%;
+    background-color: #F4F4F4;
+    height: 40px;
+
+    /* Z-index set high to ensure that menu stays on top of other elements */
+    z-index: 10;
+    border-bottom: 2px solid #C06014;
+}
+#ddbutton {
+    float: right;
+    margin-right: 3%;
+    padding: 1%;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #F4F4F4;
+    color: #373737;
+    border: none;
+}
+#ddcontent {
+    margin-top: 40px;
+    display: none;
+    background-color: #373737;
+    width: 100%;
+    text-align: center;
+}
+#ddcontent a {
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+    color: #F4F4F4;
+}
+
+/* ============= CONTAINERS ============= */
+
+.container {
+    top: 50px;
+    width: 98%;
+    margin: auto;
+    display: block;
+}
+
+/* Display is flex instead of block for these two containers, 
+as they look better that way: */
+.container.criticspick {
+    display: flex;
+}
+.container.index.c {
+    display: flex;
+}
+
+/* Adjust margin for form so that it aligns with content above */
+form {
+    margin-left: 5%;
+}
+
+/* ============= CONTENT ============= */
+
+/* Font size made smaller so title fits on one line */
+.movie_title {
+    font-size: 1em;
+}
+}
+
+
+/*============================ MAX WIDTH 690PX ============================= */
+
+@media(max-width: 690px) {
+
+.container.criticspick {
+    display: block;
+}
+
+/* Adjust width and height for all players manually */
+/* Setting height to 'auto' makes player disproportionate */
+/* Adjust all players separately, as giving them all the same class
+resulted in CSS not being implemented, and the same ID cannot be given to more than
+one element */
+
+#playerA {
+    width: 440px;
+    height: 290px;
+}
+#playerB {
+    width: 440px;
+    height: 290px;
+}
+#playerC {
+    width: 440px;
+    height: 290px;
+}
+}
+
+
+/*============================ MAX WIDTH 500PX ============================= */
+
+@media(max-width: 500px) {
+
+.container.index.c {
+    display: block;
+}
+
+/* Adjust width and height for all players manually */
+/* Setting height to 'auto' makes player disproportionate */
+/* Adjust all players separately, as giving them all the same class
+resulted in CSS not being implemented, and the same ID cannot be given to more than
+one element */
+
+#playerA {
+    width: 340px;
+    height: 200px;
+}
+#playerB {
+    width: 340px;
+    height: 200px;
+}
+#playerC {
+    width: 340px;
+    height: 200px;
+}
+}
+
+/*============================ MAX WIDTH 360PX ============================= */
+
+@media(max-width: 360px) {
+
+/* Adjust width and height for all players manually */
+/* Setting height to 'auto' makes player disproportionate */
+/* Adjust all players separately, as giving them all the same class
+resulted in CSS not being implemented, and the same ID cannot be given to more than
+one element */
+
+#playerA {
+    width: 240px;
+    height: 140px;
+}
+#playerB {
+    width: 240px;
+    height: 140px;
+}
+#playerC {
+    width: 240px;
+    height: 140px;
+}
+}

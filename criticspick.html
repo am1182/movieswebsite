@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<!-- CONTENTS 
+
+1. HEAD
+        a. TITLE
+2. BODY
+        a. MENU
+        b. DROPDOWN MENU
+        c. CONTAINER A
+        d. CONTAINER B
+        e. SLIDING SECTION A
+        f. CONTAINER C
+        g. SLIDING SECTION B
+
+-->
+ 
+<!-- ========================= HEAD ========================= -->
+<head>
+    <title>Movies</title> 
+
+    <!-- Meta tag to help with responsive design -->
+    <!-- Taken from: https://css-tricks.com/snippets/html/responsive-meta-tag/ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Insert JS file -->
+    <script src = "criticspick.js"></script>
+    <!-- Insert dropdown menu JS file for dropdown menu function -->
+    <script src = "dropdown.js"></script>
+ 
+	<!-- Insert iframe file to use Youtube API for viewing videos -->
+	<script src="https://www.youtube.com/iframe_api"></script>
+
+	<!-- Link to stylesheet to customise this page -->
+    <link rel="stylesheet" type="text/css" href="body.css">
+    <link rel="stylesheet" type="text/css" href="queries.css">
+
+	<!-- Custom fonts imported from Google Fonts to customisation -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+
+<!-- ========================= BODY ========================= -->
+<body>
+    
+    <!-- ========== MENU ========== -->
+    <nav class="menu">
+        <ul>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="criticspick.html">Critics' Pick</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== DROPDOWN ========== -->
+    <!-- Adapted from: http://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <nav class="dropdown">
+        <!-- onclick function from: http://www.w3schools.com/jsref/event_onclick.asp -->
+        <button id="ddbutton" onclick="dropdown()">MENU</button>
+        <ul id="ddcontent">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criticspick.html">Critics' Pick</a></li>
+            <li><a href="search.html">Search</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== CONTAINER A ========== -->
+    <section class="container criticspick a">
+        <div class="content criticspick a1">
+        	<h1>New York Times Critics' Pick</h1>
+        </div>
+    </section>
+
+    <!-- ========== CONTAINER B ========== -->
+    <section class="container criticspick b">
+
+        <div class="content criticspick b1">
+            <div class="movie_title" id="title_b1"></div>
+            <div class="movie_img" id="img_b1"></div>
+            <!-- onclick function from: http://www.w3schools.com/jsref/event_onclick.asp -->
+            <input type="button" class="movie_button" onclick="b1()" value="Trailer">
+        </div>
+
+        <div class="content criticspick b2">
+        	<div class="movie_title" id="title_b2"></div>
+            <div class="movie_img" id="img_b2"></div>
+            <!-- onclick function from: http://www.w3schools.com/jsref/event_onclick.asp -->
+            <input type="button" class="movie_button" onclick="b2()" value="Trailer">
+        </div>
+
+        <div class="content criticspick b3">
+        	<div class="movie_title" id="title_b3"></div>
+            <div class="movie_img" id="img_b3"></div>
+            <!-- onclick function from: http://www.w3schools.com/jsref/event_onclick.asp -->
+            <input type="button" class="movie_button" onclick="b3()" value="Trailer">
+        </div>
+
+    </section>
+
+    <!-- ========================== SLIDING SECTION A ============================ -->
+    <!-- Dropdown section adapted from: http://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <div class="slideout" id="slideoutA">
+
+        <!-- ========== CONTAINER ========== -->
+        <section class="container slideout title">
+            <div class="content slideout title a" id="title_a"></div>
+        </section>
+
+        <!-- ========== CONTAINER ========== -->
+        <section class="container slideout g">
+            <div class="content slideout year a" id="year_a"></div>
+            <div class="content slideout genre a" id="genre_a"></div>
+            <div class="content slideout rating a" id="rating_a"></div>
+            <div class="content slideout director a" id="director_a"></div>
+            <div class="content slideout actors a" id="actors_a"></div>
+        </section>
+
+        <!-- ========== CONTAINER ========== -->
+        <section class="container slideout">
+            <div class="content slideout iframe a" id="iframe_a">
+                <iframe class="player" id="playerA" width="640" height="390"></iframe>
+            </div>
+        </section>
+
+        <!-- ========== CONTAINER ========== -->
+        <section class="container slideout g">
+            <div class="content slideout summary a" id="summary_a"></div>
+            <div class="content slideout awards a" id="awards_a"></div>
+            <div class="content slideout rated a" id="rated_a"></div>
+            <div class="content slideout released a" id="released_a"></div>
+            <div class="content slideout runtime a" id="runtime_a"></div>
+        </section>
+    </div>
+
+    <!-- ========================== CONTAINER C ============================ -->
+    <section class="container criticspick c">
+
+        <div class="content criticspick c1">
+        	<div class="movie_title" id="title_c1"></div>
+            <div class="movie_img" id="img_c1"></div>
+            <!-- onclick function from: http://www.w3schools.com/jsref/event_onclick.asp -->
+            <input type="button" class="movie_button" onclick="c1()" value="Trailer">
+        </div>
+
+        <div class="content criticspick c2">
+        	<div class="movie_title" id="title_c2"></div>
+            <div class="movie_img" id="img_c2"></div>
+            <!-- onclick function from: http://www.w3schools.com/jsref/event_onclick.asp -->
+            <input type="button" class="movie_button" onclick="c2()" value="Trailer">
+        </div>
+
+        <div class="content criticspick c3">
+        	<div class="movie_title" id="title_c3"></div>
+            <div class="movie_img" id="img_c3"></div>
+            <!-- onclick function from: http://www.w3schools.com/jsref/event_onclick.asp -->
+            <input type="button" class="movie_button" onclick="c3()" value="Trailer">
+        </div>
+
+    </section>
+
+    <!-- ========================== SLIDING SECTION B ============================ -->
+    <!-- Dropdown section adapted from: http://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <div class="slideout" id="slideoutB">
+        <!-- ========== CONTAINER ========== -->
+        <section class="container slideout title">
+            <div class="content slideout title b" id="title_b"></div>
+        </section>
+
+        <!-- ========== CONTAINER ========== -->
+        <section class="container slideout g">
+            <div class="content slideout year b" id="year_b"></div>
+            <div class="content slideout genre b" id="genre_b"></div>
+            <div class="content slideout rating b" id="rating_b"></div>
+            <div class="content slideout director b" id="director_b"></div>
+            <div class="content slideout actors b" id="actors_b"></div>
+        </section>
+
+        <!-- ========== CONTAINER ========== -->
+        <section class="container slideout">
+            <div class="content slideout iframe b" id="iframe_b">
+                <iframe class="player" id="playerB" width="640" height="390"></iframe>
+            </div>
+        </section>
+
+        <!-- ========== CONTAINER ========== -->
+        <section class="container slideout g">
+            <div class="content slideout summary b" id="summary_b"></div>
+            <div class="content slideout awards b" id="awards_b"></div>
+            <div class="content slideout rated b" id="rated_b"></div>
+            <div class="content slideout released b" id="released_b"></div>
+            <div class="content slideout runtime b" id="runtime_b"></div>
+        </section>
+    </div>
+</body>
+</html>

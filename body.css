@@ -1,0 +1,277 @@
+
+/*======================= CONTENTS ========================
+
+1. WHOLE BODY
+2. MENU
+		a. MENU
+		b. DROPDOWN
+3. CONTAINERS
+4. CONTENT
+5. INPUT
+6.SLIDEOUT
+
+*/
+
+
+/*======================= WHOLE BODY ========================*/
+
+/* General rules that apply to all elements of set category in the body,
+which can be ovewritten if necessary */
+body {
+	/* Font imported from: https://fonts.google.com/specimen/Open+Sans */
+	/* Change font of the whole page */
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+*{
+	/* Remove gap between page and browser so page looks cleaner */
+	margin: 0px; 
+	padding: 0px;
+}
+h1 {
+	margin: 4%;
+	font-size: 40px;
+	color: #373737;
+}
+h4 {
+	font-size: 40px;
+	margin: 4%;
+}
+h5 {
+	font-size: 20px;
+}
+p {
+	margin: 4%;
+}
+
+/*=============================== MENU ================================*/
+
+/*========== MENU ========== */
+
+.menu {
+	background-color: #F4F4F4;
+
+	/* Places menu on top of all other elements on the page */
+	z-index: 10;
+
+	/* Menu is fixed and does not disappear when page is scrolled */
+	position: fixed;
+	width: 70%;
+	height: 60px;
+	margin-left: 15%;
+	border-bottom: 2.5px solid #C06014;
+}
+.menu ul {
+	/* Remove bullet points from each list item */
+	list-style: none;
+}
+.menu ul li {
+	width: 150px;
+	height: 30px;
+	line-height: 60px;
+	text-align: center;
+
+	/* Links appear on the right of the bar as opposed to the left */
+	float: right;
+}
+.menu a {
+	color: #373737;
+
+	/* Get rid of underline on links for aesthetic purposes */
+	text-decoration: none;
+	font-size: 20px;
+}
+
+/*========== DROPDOWN ========== */
+
+.dropdown {
+
+	/* Dropdown menu not displayed when screen is full size */
+	display: none;
+}
+
+
+/*=========================== CONTAINERS ============================*/
+
+/* General rule for all containers, so they are all the same size */
+.container {
+	top: 70px;
+
+	/* Using flexbox for clear layout */
+	display: flex;
+	position: relative;
+	width: 70%;
+	margin: auto;
+}
+
+/* Container rules separate since they are different */
+.container.index.a {
+	background-color: #D7CEC7;
+}
+
+.container.search.a {
+	background-color: #D7CEC7;
+}
+.container.search.b {
+	background-color: #F4F4F4;
+}
+
+/*============================= CONTENT ==============================*/
+
+/* General rule for all content so it has the same padding */
+.content {
+	padding: 2%;
+	flex: 1;
+}
+
+/*===== INDEX ===== */
+
+/* Separate content rules, as they are different for different content */
+.content.index.b1 {
+	background-color: #F4F4F4;
+}
+.content.index.c {
+	text-align: center;
+	background-color: #D7CEC7;
+}
+.content.index img {
+	width: 60%;
+	margin: 10%;
+}
+.content.index a {
+	text-decoration: none;
+	font-size: 30px;
+	color: #C06014;
+}
+
+/*===== CRITICS PICK ===== */
+
+/* Separate content rules, as they are different for different content */
+.content.criticspick {
+	text-align: center;
+	background-color: #F4F4F4;
+}
+.content.criticspick.a1 {
+	text-align: left;
+	background-color: #D7CEC7;
+}
+img {
+	width: 80%;
+	height: auto;
+	border-radius: 5px;
+}
+.movie_title {
+	margin: 5%;
+	font-size: 1.5em;
+}
+
+/*===== SEARCH ===== */
+
+/* Separate content rules, as they are different for different content */
+.content.search.b1 {
+	padding-right: 5%;
+}
+.content.search.b2 {
+	padding-left: 1%;
+}
+
+
+/*=============================== INPUT ================================*/
+
+/* Button customisation from: http://www.w3schools.com/css/css3_buttons.asp */
+
+input[type="button"] {
+	width: 80%;
+	height: 40px;
+	padding: 0.2%;
+	margin-top: 0;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	border: none;
+	border-radius: 5px;
+	background-color: #C06014;
+	color: #F4F4F4;
+	font-size: 1.2em;
+}
+
+/* Button changes background colour when mouse is hovered over it */
+input[type="button"]:hover {
+	background-color: #944B10;
+}
+input[type="text"] {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 10px;
+	padding: 7px;
+	width: 180px;
+	height: 25px;
+	border-radius: 5px;
+	border: none;
+}
+
+/* Some rules from input above overwritten as this button requires different styling */
+#search_button {
+	width: 100px;
+	margin-top: 4%;
+	margin-bottom: 6%;
+}
+
+
+/*=========================== SLIDEOUT ============================*/
+
+/* Rules for container with YouTube player that appears when a button is pressed */
+
+/* I decided to put all of these in one place as opposed to splitting up the
+containers and content into sections above, as this makes it easier to edit just
+the player, which requires different rules to other containers/content boxes */
+
+.container.slideout {
+	width: 100%;
+	margin: auto;
+	background-color: #D7CEC7;
+}
+.container.slideout.title {
+	background-color: #F4F4F4;
+}
+.container.slideout.g {
+	background-color: #565656;
+	color: #D7CEC7;
+}
+.content.slideout.actors {
+	flex: 3;
+}
+.content.slideout.title {
+	font-size: 50px;
+	color: #C06014;
+}
+.content.slideout.summary {
+	flex: 4;
+}
+.content.slideout.iframe {
+	text-align: center;
+	width: 100%;
+}
+
+/* Adjust all players separately, as giving them all the same class
+resulted in CSS not being implemented, and the same ID cannot be given to more than
+one element */
+
+#slideoutA {
+	width: 70%;
+	margin-left: 15%;
+	display: none;
+}
+#slideoutB {
+	width: 70%;
+	margin-left: 15%;
+	display: none;
+}
+#slideoutC {
+	width: 70%;
+	margin-left: 15%;
+	display: none;
+}
+.player {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
